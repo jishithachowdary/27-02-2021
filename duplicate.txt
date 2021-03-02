@@ -1,0 +1,35 @@
+var input_array=[11,12,13,14,15,11,12,13,14,15];
+var duplicates=function(input_array){
+    let duplicate=[]
+    for(i=0;i<input_array.length;i++)
+    {
+        let count=0;
+        for(j=0;j<duplicate.length;j++)
+        {
+            if(input_array[i]==duplicate[j])
+            {
+                count=count+1;
+            }
+        }
+        if(count==0)
+        {
+            duplicate.push(input_array[i]);
+        }
+    }
+    return duplicate;
+}
+console.log(duplicates(input_array));
+
+
+
+
+
+
+
+
+Output:
+[ 11, 12, 13, 14, 15 ]
+Execution Time:
+0.067s
+Memory Used:
+8132kb

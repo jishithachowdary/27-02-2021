@@ -1,0 +1,34 @@
+var input_array1=[11,12,13,14,15];
+var input_array2=[2,4,5,15,33];
+var median=function(input_array1,input_array2){
+var merge_array=[...input_array1,...input_array2];
+for(let i=0;i<merge_array.length;i++)
+{
+    for(let j=i+1;j<merge_array.length;j++)
+    {
+        if(merge_array[i]>merge_array[j])
+        {
+            let temp=merge_array[i];
+            merge_array[i]=merge_array[j];
+            merge_array[j]=temp;
+        }
+    }
+}
+let index=(1+merge_array.length)/2;
+return (merge_array[index-0.5]+merge_array[index+0.5])/2;
+}
+console.log(median(input_array1,input_array2));
+
+
+
+
+
+
+
+
+Output:
+13.5
+Execution Time:
+0.065s
+Memory Used:
+8100kb

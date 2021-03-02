@@ -1,0 +1,26 @@
+var input_array=[11,12,13,14,15];
+var k=3;
+var rotate=function(input_array,k){
+    while(k>0)
+    {
+        let array=input_array.slice(1);
+        array.push(input_array[0]);
+        input_array=array;
+        k=k-1;
+    }
+   return input_array;
+}
+console.log(rotate(input_array,k));
+
+
+
+
+
+
+
+Output:
+[ 14, 15, 11, 12, 13 ]
+Execution Time:
+0.067s
+Memory Used:
+8124kb

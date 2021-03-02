@@ -1,0 +1,15 @@
+var inputarray=["raju","getta","sita"]
+var titlecase=inputarray.map(function(element){
+    return element[0].toUpperCase()+element.slice(1);
+})
+console.log(titlecase);
+
+
+
+
+Output:
+[ 'Raju', 'Getta', 'Sita' ]
+Execution Time:
+0.069s
+Memory Used:
+8056kb

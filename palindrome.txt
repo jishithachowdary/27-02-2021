@@ -1,0 +1,28 @@
+var input_array=[121,11,144];
+var palindrome=input_array.filter(function(element){
+    let input=element;
+    let reverse=0;
+    while(input!==0)
+    {
+        let remainder=input%10;
+        reverse=reverse*10+remainder;
+        input=(input-remainder)/10;
+    }
+    if(element===reverse)
+    {
+        return element;
+    }
+})
+
+console.log(palindrome);
+
+
+
+
+
+Output:
+[ 121, 11 ]
+Execution Time:
+0.067s
+Memory Used:
+8140kb

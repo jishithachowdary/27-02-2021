@@ -1,0 +1,39 @@
+var prime=function(inputarray){
+    let outputarray=[]
+    for(let i in inputarray)
+    {
+        let count=0;
+        for(let j=2;j<inputarray[i];j++)
+        {
+            if(inputarray[i]%j===0)
+            {
+                count=count+1;
+            }
+        }
+        if(count===0)
+        {
+            outputarray.push(inputarray[i])
+        }
+    }
+    return outputarray;
+}
+
+
+
+
+var input_array=[1,2,3,4,5,10,11,12,13,14,15];
+var output_array=prime(input_array);
+console.log(output_array);
+
+
+
+
+
+
+
+Output:
+[ 1, 2, 3, 5, 11, 13 ]
+Execution Time:
+0.068s
+Memory Used:
+8148kb

@@ -1,0 +1,15 @@
+var input_array=[10,11,12,13,14,15];
+var output=input_array.reduce(function (result,element){
+   return element+result;
+},0)
+console.log(output);
+
+
+
+
+Output:
+75
+Execution Time:
+0.068s
+Memory Used:
+8068kb
